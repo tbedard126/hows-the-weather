@@ -4,5 +4,15 @@ let city;
 
 const queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + APIkey;
 
+const body = document.body
 
 // fetch(queryURL)
+
+
+
+// const createDiv = () => {
+//     $(`div`).text('this is some text');
+//     'div'.append(body)
+// }
+
+// createDiv()
