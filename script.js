@@ -1,18 +1,34 @@
 const APIkey = '871b3ff65e2c2af43749b9d344bcd5d5'
-
+const searchButton = $('.searchButton')
 let city;
 
-const queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + APIkey;
 
 const body = document.body
 
-// fetch(queryURL)
+function getApi(city) {
+    const queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + APIkey;
+
+    fetch(queryURL)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            for (let i = 0; i < data.length; i++) {
+                const listItem = $('<li>');
+                listItem.text = data[i].html_url;
+                body.append(listItem);
+            }
+        });
+}
 
 
 
-// const createDiv = () => {
-//     $(`div`).text('this is some text');
-//     'div'.append(body)
-// }
+searchButton.click(function () {
+    city = $('.userInput').val()
+    getApi(city)
 
-// createDiv()
+})
+
+
+
+
