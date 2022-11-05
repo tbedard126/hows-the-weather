@@ -19,13 +19,17 @@
     <div class="container">
 
         <div class="row">
+
             <div class="col">
                 <input type="text" class="userInput">
                 <button type="button" class="searchButton">Search</button>
                 1 of 2
             </div>
             <ul></ul>
-
+            <div class="col-lg-9 pb-3">
+                <section id="today"></section>
+                <section id="forecast"></section>
+            </div>
         </div>
 
 
@@ -37,9 +41,13 @@
 
 
 
-
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/timezone.min.js"
+        integrity="sha512-pslqxxHAYPCxaSeFSmXXxDkLejD5dbFVC66aiVq0z4v7VTJBU+wqcG1OpNh4p3MjS2D6NCwz/H2QmSc7dXxryg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+        integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+        crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
