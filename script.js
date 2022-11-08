@@ -143,7 +143,7 @@ searchButton.click(function () {
 
 function showSavedLocations() {
 
-    let searchedCities = JSON.parse(localStorage.getItem('location'));
+    // let searchedCities = JSON.parse(localStorage.getItem('location'));
 
 
     for (let i = 0; i < searchedCities.length; i++) {
@@ -154,4 +154,3 @@ function showSavedLocations() {
 
 }
 
-showSavedLocations()
